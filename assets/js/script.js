@@ -169,10 +169,10 @@ for (let i = 0; i < navigationLinks.length; i++) {
 const projModalTriggers = document.querySelectorAll('.proj-modal-trigger');
 const projModalOverlays = document.querySelectorAll('.proj-modal-overlay');
 const projModalCloseButtons = document.querySelectorAll('.proj-modal-close');
-const projModalContents = document.querySelectorAll('.proj-modal-content');
 
 projModalTriggers.forEach(trigger => {
-  trigger.addEventListener('click', () => {
+  trigger.addEventListener('click', event => {
+    event.preventDefault(); // Prevent the default link behavior
     const modalId = trigger.getAttribute('data-proj-modal-id');
     const modalOverlay = document.getElementById(`${modalId}-overlay`);
     modalOverlay.classList.add('active');
@@ -194,10 +194,3 @@ projModalOverlays.forEach(overlay => {
     }
   });
 });
-
-projModalContents.forEach(content => {
-  content.addEventListener('click', event => {
-    event.stopPropagation();
-  });
-});
-
