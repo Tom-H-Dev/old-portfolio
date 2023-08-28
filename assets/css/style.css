@@ -1045,6 +1045,7 @@ main {
   margin-bottom: 10px;
 }
 
+
 .project-item { display: none; }
 
 .project-item.active {
@@ -1624,7 +1625,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  .modal-overlay {
+  .proj-modal-overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -1635,29 +1636,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     z-index: 1000;
   }
   
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-  }
-  
-  .modal-trigger {
-    cursor: pointer;
-  }
-  
-  .modal-overlay.active {
-    display: block;
-  }
+
 
 
 
@@ -2067,3 +2046,107 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+
+
+
+
+
+
+.proj-modal-content {
+  position: absolute;
+  max-height: 70vh;
+  overflow-y: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(30, 30, 31, 1);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  max-width: 60%;
+}
+/*#region Scrollbar Modal */
+.proj-modal-content::-webkit-scrollbar {
+  width: 20px;
+}
+
+.proj-modal-content::-webkit-scrollbar-track {
+  background: transparent; /* Set the background to transparent */
+}
+
+.proj-modal-content::-webkit-scrollbar-thumb {
+  border: 5px solid var(--smoky-black);
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 20px;
+  box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+              inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+}
+
+.proj-modal-content::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+.proj-modal-content::-webkit-scrollbar-button {
+  height: 60px;
+}
+
+/*#endregion Scrollbar Modal */
+
+.proj-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.proj-modal-trigger {
+  cursor: pointer;
+}
+
+.proj-modal-overlay.active {
+  display: block;
+}
+
+.proj-testimonial-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: center;
+}
+
+/* Style for the button */
+.proj-testimonial-button {
+  background-color: #f1f1f1;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Container for the image */
+.proj-testimonial-image-container {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+/* Style for the image within the container */
+.proj-testimonial-image {
+  width: 30%;
+  height: 30%;
+  max-width: 100%;
+  padding: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
