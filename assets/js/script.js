@@ -136,39 +136,90 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
+
+
+
+
+
+
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
-
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
-
-
-
-
-
-
-
-
-
 const projModalTriggers = document.querySelectorAll('.proj-modal-trigger');
 const projModalOverlays = document.querySelectorAll('.proj-modal-overlay');
 const projModalCloseButtons = document.querySelectorAll('.proj-modal-close');
+
+// Function to open modal
+function openModal(modalId) {
+  const modalOverlay = document.getElementById(`${modalId}-overlay`);
+  modalOverlay.classList.add('active');
+}
+
+// Function to close modal
+function closeModal(modalId) {
+  const modalOverlay = document.getElementById(`${modalId}-overlay`);
+  modalOverlay.classList.remove('active');
+}
+
+// Function to remove modal event listeners
+function removeModalEventListeners() {
+  projModalTriggers.forEach(trigger => {
+    trigger.removeEventListener('click', openModal);
+  });
+
+  projModalCloseButtons.forEach(button => {
+    button.removeEventListener('click', closeModal);
+  });
+
+  projModalOverlays.forEach(overlay => {
+    overlay.removeEventListener('click', closeModal);
+  });
+}
+
+// Function to switch tabs
+function switchTab(tabId) {
+  // Remove modal event listeners before switching tabs
+  removeModalEventListeners();
+
+  for (let i = 0; i < pages.length; i++) {
+    if (tabId === pages[i].dataset.page) {
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+      window.scrollTo(0, 0);
+    } else {
+      pages[i].classList.remove("active");
+      navigationLinks[i].classList.remove("active");
+    }
+  }
+
+  // Reattach modal event listeners after switching tabs
+  projModalTriggers.forEach(trigger => {
+    trigger.addEventListener('click', openModal);
+  });
+
+  projModalCloseButtons.forEach(button => {
+    button.addEventListener('click', closeModal);
+  });
+
+  projModalOverlays.forEach(overlay => {
+    overlay.addEventListener('click', event => {
+      if (event.target === overlay) {
+        const modalId = overlay.getAttribute('id').replace('-overlay', '');
+        closeModal(modalId);
+      }
+    });
+  });
+}
+
+// Add event listeners to navigation links
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+    switchTab(navigationLinks[i].dataset.navLink);
+  });
+}
+
+// Call the switchTab function for the initial tab
+switchTab('portfolio'); // Assuming "portfolio" is the initial tab
 
 projModalTriggers.forEach(trigger => {
   trigger.addEventListener('click', event => {
