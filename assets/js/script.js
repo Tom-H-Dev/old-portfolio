@@ -157,3 +157,25 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+
+
+
+
+
+
+
+const modalTriggers = document.querySelectorAll('.modal-trigger');
+const modalOverlay = document.querySelector('.modal-overlay');
+const modalClose = document.querySelector('.modal-close');
+
+modalTriggers.forEach(trigger => {
+  trigger.addEventListener('click', () => {
+    modalOverlay.classList.add('active');
+  });
+});
+
+modalClose.addEventListener('click', () => {
+  modalOverlay.classList.remove('active');
+});

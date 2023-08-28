@@ -583,6 +583,11 @@ main {
   scroll-snap-align: center;
 }
 
+.project-testimonials-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+}
+
 .testimonials-avatar-box {
   position: absolute;
   top: 0;
@@ -595,6 +600,8 @@ main {
 
 .testimonials-item-title { margin-bottom: 7px; }
 
+.project-testimonials-item-title { margin-bottom: 7px; }
+
 .testimonials-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -603,6 +610,18 @@ main {
   display: -webkit-box;
   line-clamp: 4;
   -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-testimonials-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  display: -webkit-box;
+  line-clamp: 0;
+  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -628,9 +647,30 @@ main {
   visibility: hidden;
 }
 
+.project-modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 20;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .modal-container::-webkit-scrollbar { display: none; }
 
 .modal-container.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.project-modal-container.active {
   pointer-events: all;
   visibility: visible;
 }
@@ -704,6 +744,11 @@ main {
 }
 
 .modal-container.active .testimonials-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.project-modal-container.active .project-testimonials-modal {
   transform: scale(1);
   opacity: 1;
 }
@@ -1483,6 +1528,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding-top: 25px;
   }
 
+  .project-content-card {
+    padding: 5px;
+    padding-top: 25px;
+  }
+
   .testimonials-avatar-box {
     transform: translate(30px, -30px);
     border-radius: 20px;
@@ -1495,9 +1545,20 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-left: 95px;
   }
 
+  .project-testimonials-item-title {
+    margin-bottom: 10px;
+    margin-left: 95px;
+    color: white;
+  }
+
   .testimonials-text {
     line-clamp: 2;
     -webkit-line-clamp: 2;
+  }
+
+  .project-testimonials-text {
+    line-clamp: 0;
+    -webkit-line-clamp: 0;
   }
 
   /* testimonials modal */
@@ -1507,6 +1568,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   .project-modal-container { padding: 20px; }
 
   .testimonials-modal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 25px;
+    padding: 30px;
+    border-radius: 20px;
+  }
+
+  .project-modal {
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -1544,6 +1614,58 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .clients-item { min-width: calc(33.33% - 35px); }
+
+
+
+
+
+  
+
+
+
+
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .modal-trigger {
+    cursor: pointer;
+  }
+  
+  .modal-overlay.active {
+    display: block;
+  }
+
+
+
+
+
+
+
+
 
 
 
@@ -1796,6 +1918,8 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* testimonials */
 
   .testimonials-item { min-width: calc(50% - 15px); }
+
+  .project-testimonials-item { min-width: calc(50% - 15px); }
 
   /* clients */
 
