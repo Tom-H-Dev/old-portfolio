@@ -774,21 +774,7 @@ main {
 
 .modal-close-btn ion-icon { --ionicon-stroke-width: 50px; }
 
-.project-modal-close-btn {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: var(--onyx);
-  border-radius: 8px;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--white-2);
-  font-size: 18px;
-  opacity: 0.7;
-}
+
 
 .project-modal-close-btn:hover,
 .project-modal-close-btn:focus { opacity: 1; }
@@ -2096,8 +2082,18 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .proj-modal-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
+  background: var(--onyx);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 18px;
+  opacity: 0.7;
 }
 
 .proj-modal-trigger {
@@ -2150,3 +2146,36 @@ textarea.form-input::-webkit-resizer { display: none; }
   
 }
 
+/* The size of the image in the modal*/
+.proj-video-size {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.image {
+  flex: 1;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 55vh; /* Set the height as needed */
+}
+
+video {
+  max-width: 100%; /* Make sure the video doesn't exceed its container's width */
+  border-radius: 20px; /* Rounded corners */
+}
