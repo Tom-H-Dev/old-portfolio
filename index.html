@@ -717,7 +717,8 @@
           
           <ul class="project-list">
 
-            <!--Everything you see before clikcing the icon-->
+            <!--Snowie Snow preview-->
+            <!--#region snowie snow-->
             <li class="project-item active" data-filter-item data-category="game development">
               <a href="#" class="proj-modal-trigger" data-proj-modal-id="project-1-modal">
             
@@ -734,7 +735,7 @@
               </a>
             </li>
             
-            <!-- Everything inside of the modal-->
+            <!-- Snowie Snow modal-->
             <div class="proj-modal-overlay" id="project-1-modal-overlay">
               <div class="proj-modal-content">
                 <!--The Close button on the top right-->
@@ -783,12 +784,12 @@
                 <!-- Additional project details can be added here -->
               </div>
             </div>  
+            <!--#endregion snowie snow-->
 
 
-            
 
-
-            <!--Everything you see before clikcing the icon-->
+            <!--Havoc Zone preview-->
+            <!--#region Havoc Zone-->
             <li class="project-item active" data-filter-item data-category="game development">
               <a href="#" class="proj-modal-trigger" data-proj-modal-id="project-2-modal">
             
@@ -798,72 +799,61 @@
                   </div>
                   <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
                 </figure>
-            
                 <h3 class="project-title">Havoc Zone (WIP)</h3>
-            
+                <!--The catagory so the project is ez to find in the projects list-->
                 <p class="project-category">Game Development</p>
             
               </a>
             </li>
             
-            <!-- Everything inside of the modal-->
+            <!-- Snowie Snow modal-->
             <div class="proj-modal-overlay" id="project-2-modal-overlay">
               <div class="proj-modal-content">
-                <!-- TODO: Make a x button-->
-                <button class="proj-modal-close"data-proj-modal-id="project-2-modal"></button>
-                <h2>Havoc Zone (WIP)</h2>
+                <!--The Close button on the top right-->
+                <button class="proj-modal-close"data-proj-modal-id="project-2-modal"><ion-icon name="close-outline"></ion-icon></button>
+                <!--The title of the project-->
+                <h2>Snowie Snow</h2>
+                <!--The image of the project displayed on the front-->
                 <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
                   <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
                 </figure>
-                <p>
-                  test text
+                <!--The first text colom-->
+                <p><br>
+                  Snowie Snow is a game where you and a friend race on sleds against eachother until the timer is up or when one of you crash against an obstacle on the slope.
+                  The game is a splitscreen local 1v1 game that only supports game controllers. 
+                </p><br>
+                <!-- Two Images Side by Side -->
+                <div class="image-container">
+                  <div class="image">
+                    <img src="./assets/images/SnowieSnow/image (11).png" alt="Image 1">
+                  </div>
+                  <div class="image">
+                    <img src="./assets/images/SnowieSnow/image (11).png" alt="Image 2" >
+                  </div>
+                </div>
+
+                <!--The second text colom-->
+                <p><br>
+                  The task we got was that we needed to make a local splitscreen gamme with controller support in the theme of Christmas. 
+                  Next to that we were teamed up in a group of 3 programmers where we got some asset packs to use for the models in the game.
+                  In this project we learned to use the new Unity input system 1.7.0 and made it procedural generated with the use of object pools. 
+                  
                 </p>
+                <!--The referance to the girhub repo-->
+                <p>
+                  <br>If you want to read some code I have writen click the icon below
+                </p>
+                <a href="https://github.com/Tom-H-Dev/Snowie-Snow" target="_blank">
+                  <img src="./assets/images/github-mark-white.png" alt="testimonial" class="proj-testimonial-image">
+                </a>
                 <!-- Additional project details can be added here -->
               </div>
-            </div>
+            </div>  
+            <!--#endregion Havoc Zone-->
 
 
 
 
-            <!--Everything you see before clikcing the icon-->
-            <li class="project-item active" data-filter-item data-category="game development">
-              <a href="#" class="proj-modal-trigger" data-proj-modal-id="project-3-modal">
-            
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-            
-                <h3 class="project-title">Something different</h3>
-            
-                <p class="project-category">Game Development</p>
-            
-              </a>
-            </li>
-            
-            <!-- Everything inside of the modal-->
-            <div class="proj-modal-overlay" id="project-3-modal-overlay">
-              <div class="proj-modal-content">
-                <!-- TODO: Make a x button-->
-                <button class="proj-modal-close"data-proj-modal-id="project-3-modal"></button>
-                <h2>Havoc Zone (WIP)</h2>
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-                <p>
-                  test text something different
-                </p>
-                <!-- Additional project details can be added here -->
-              </div>
-            </div>
             
 
             
@@ -980,37 +970,76 @@
             </li>
 
 
-          </ul>
-
-          <div class="modal-container" data-modal-container>
-
-            <div class="overlay" data-overlay></div>
-  
-            <section class="testimonials-modal">
-  
-              <button class="modal-close-btn" data-modal-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-  
-              <div class="modal-content">
-  
-                <h4 class="h3 modal-title" data-modal-title>Project Title</h4>
-  
-                <div class = "testimonials-text" data-modal-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
+            <!--Template preview-->
+            <!--#region Template-->
+            <li class="project-item active" data-filter-item data-category="game development">
+              <a href="#" class="proj-modal-trigger" data-proj-modal-id="project-99-modal">
+            
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+                <h3 class="project-title">Havoc Zone (WIP)</h3>
+                <!--The catagory so the project is ez to find in the projects list-->
+                <p class="project-category">Game Development</p>
+            
+              </a>
+            </li>
+            
+            <!-- Snowie Snow modal-->
+            <div class="proj-modal-overlay" id="project-99-modal-overlay">
+              <div class="proj-modal-content">
+                <!--The Close button on the top right-->
+                <button class="proj-modal-close"data-proj-modal-id="project-99-modal"><ion-icon name="close-outline"></ion-icon></button>
+                <!--The title of the project-->
+                <h2>Snowie Snow</h2>
+                <!--The image of the project displayed on the front-->
+                <figure class="project-img">
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+                <!--The first text colom-->
+                <p><br>
+                  Snowie Snow is a game where you and a friend race on sleds against eachother until the timer is up or when one of you crash against an obstacle on the slope.
+                  The game is a splitscreen local 1v1 game that only supports game controllers. 
+                </p><br>
+                <!-- Two Images Side by Side -->
+                <div class="image-container">
+                  <div class="image">
+                    <img src="./assets/images/SnowieSnow/image (11).png" alt="Image 1">
+                  </div>
+                  <div class="image">
+                    <video src="./assets/videos/SnowieSnow/snowiesnow.mp4" muted loop >
+                  </div>
                 </div>
-  
+                <div class="video-container">
+                  <video muted loop autoplay>
+                    <source src="./assets/videos/SnowieSnow/snowie-snow.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+
+                <!--The second text colom-->
+                <p><br>
+                  The task we got was that we needed to make a local splitscreen gamme with controller support in the theme of Christmas. 
+                  Next to that we were teamed up in a group of 3 programmers where we got some asset packs to use for the models in the game.
+                  In this project we learned to use the new Unity input system 1.7.0 and made it procedural generated with the use of object pools. 
+                  
+                </p>
+                <!--The referance to the girhub repo-->
+                <p>
+                  <br>If you want to read some code I have writen click the icon below
+                </p>
+                <a href="https://github.com/Tom-H-Dev/Snowie-Snow" target="_blank">
+                  <img src="./assets/images/github-mark-white.png" alt="testimonial" class="proj-testimonial-image">
+                </a>
+                <!-- Additional project details can be added here -->
               </div>
-  
-            </section>
-  
-          </div>
+            </div>  
+            <!--#endregion Template-->
+
+          </ul>
 
         </section>
 
