@@ -2053,6 +2053,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: white;
   max-width: 60%;
 }
+
 /*#region Scrollbar Modal */
 .proj-modal-content::-webkit-scrollbar {
   width: 20px;
