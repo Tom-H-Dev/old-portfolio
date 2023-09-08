@@ -2183,17 +2183,13 @@ video {
 
 /* Scroll Down Arrow */
 .scroll-down-arrow {
-  position: absolute;
-  bottom: 10px; /* Adjust the distance from the bottom as needed */
+  position: fixed;
+  bottom: 80px; /* Adjust the distance from the bottom as needed */
   left: 50%;
   transform: translateX(-50%);
-  font-size: 32px; /* Adjust the font size as needed */
+  font-size: 46px; /* Adjust the font size as needed */
   color: white; /* White arrow color */
-  opacity: 0; /* Initially hide the arrow */
+  /*opacity: 0; /* Initially hide the arrow */
   z-index: 9999; /* Ensure it's above other content */
-  cursor: pointer; /* Show a pointer cursor */
-}
-
-.scroll-down-arrow .arrow {
-  cursor: default; /* Remove pointer cursor */
+  cursor: default; /* Show a pointer cursor */
 }

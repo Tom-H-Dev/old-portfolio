@@ -201,6 +201,8 @@ projModalContents.forEach(content => {
   });
 });
 
+
+
 // Get the scroll-down arrow element for the main page
 const scrollDownArrow = document.querySelector('.scroll-down-arrow');
 
@@ -211,7 +213,7 @@ function toggleScrollArrow() {
 
   if (scrollY + windowHeight >= document.body.scrollHeight) {
     // Reached the bottom of the page, hide the arrow
-    scrollDownArrow.style.opacity = '0';
+    scrollDownArrow.style.opacity = '1';
   } else {
     // Not at the bottom, show the arrow
     scrollDownArrow.style.opacity = '1';
@@ -224,15 +226,3 @@ window.addEventListener('scroll', toggleScrollArrow);
 // Initial call to set the arrow's visibility when the page loads
 toggleScrollArrow();
 
-// Additional code for the modal's scroll indicator
-const scrollIndicator = document.querySelector('.scroll-indicator');
-const projModalContent = document.querySelector('.proj-modal-content');
-
-projModalContent.addEventListener('scroll', () => {
-  // Check the scroll position within the modal
-  if (projModalContent.scrollTop > 0) {
-    scrollIndicator.style.opacity = '0';
-  } else {
-    scrollIndicator.style.opacity = '1';
-  }
-});
