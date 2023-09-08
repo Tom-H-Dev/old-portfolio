@@ -74,7 +74,7 @@
             <div class="contact-info">
               <p class="contact-title">Email</p>
 
-              <a href="mailto:tom.holewijn@protonmail.com" class="contact-link">tom.holewijn@protonmail.com</a>
+              <a href="mailto:tom.holewijn@protonmail.com" class="contact-link">tom.holewijn@<br>protonmail.com</a>
             </div>
 
           </li>
@@ -740,6 +740,7 @@
             <!-- Snowie Snow modal-->
             <div class="proj-modal-overlay" id="project-1-modal-overlay">
               <div class="proj-modal-content">
+                <div class="scroll-indicator"></div>
                 <!--The Close button on the top right-->
                 <button class="proj-modal-close"data-proj-modal-id="project-1-modal"><ion-icon name="close-outline"></ion-icon></button>
                 <!--The title of the project-->
@@ -795,6 +796,11 @@
                   <img src="./assets/images/github-mark-white.png" alt="testimonial" class="proj-testimonial-image">
                 </a>
                 <!-- Additional project details can be added here -->
+
+                <!-- Scroll Down Arrow -->
+                <div class="scroll-down-arrow">
+                  <ion-icon name="arrow-down-circle"></ion-icon>
+                </div>
               </div>
             </div>  
             <!--#endregion snowie snow-->
@@ -1218,9 +1224,12 @@
                 <!--The title of the project-->
                 <h2>Snowie Snow</h2>
                 <!--The image of the project displayed on the front-->
-                <figure class="project-img">
-                  <img src="./assets/images/Galaga unity screenshot.png" alt="orizon" loading="lazy">
-                </figure>
+                <div class="video-container">
+                  <video muted loop autoplay>
+                    <source src="./assets/videos/GalagaDB/galaga.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
                 <!--The first text colom-->
                 <p><br>
                   The game we had to remake was Galaga, we made this in a weeks time.
@@ -1241,7 +1250,8 @@
                 <!--The second text colom-->
                 <p><br>
                   For this project I used the <a href="https://playfab.com/" target="_blank">Microsfot Azure PlayFab</a> database to store the scores of the players.
-                  Next to that I have a login screen where the players can login or register an account.
+                  Next to that I have a login screen where the players can login or register an account. and this information will be saved next to a server ID where the stats of the player get stored.
+                  Whem a registed user dies and has a new highscore this will be sent to the database.
                 </p>
                 <!--The referance to the github repo-->
                 <p>

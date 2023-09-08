@@ -201,3 +201,38 @@ projModalContents.forEach(content => {
   });
 });
 
+// Get the scroll-down arrow element for the main page
+const scrollDownArrow = document.querySelector('.scroll-down-arrow');
+
+// Function to toggle the arrow's visibility based on scroll position for the main page
+function toggleScrollArrow() {
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  const windowHeight = window.innerHeight;
+
+  if (scrollY + windowHeight >= document.body.scrollHeight) {
+    // Reached the bottom of the page, hide the arrow
+    scrollDownArrow.style.opacity = '0';
+  } else {
+    // Not at the bottom, show the arrow
+    scrollDownArrow.style.opacity = '1';
+  }
+}
+
+// Add a scroll event listener to toggle the arrow's visibility for the main page
+window.addEventListener('scroll', toggleScrollArrow);
+
+// Initial call to set the arrow's visibility when the page loads
+toggleScrollArrow();
+
+// Additional code for the modal's scroll indicator
+const scrollIndicator = document.querySelector('.scroll-indicator');
+const projModalContent = document.querySelector('.proj-modal-content');
+
+projModalContent.addEventListener('scroll', () => {
+  // Check the scroll position within the modal
+  if (projModalContent.scrollTop > 0) {
+    scrollIndicator.style.opacity = '0';
+  } else {
+    scrollIndicator.style.opacity = '1';
+  }
+});
