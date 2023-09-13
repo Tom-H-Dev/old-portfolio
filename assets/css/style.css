@@ -2193,3 +2193,26 @@ video {
   z-index: 9999; /* Ensure it's above other content */
   cursor: default; /* Show a pointer cursor */
 }
+
+/* Center the button horizontally and vertically */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/* Style the button */
+.rounded-button {
+    padding: 10px 20px;
+    background-color: #27272a;
+    color: #fff;
+    border: none;
+    border-radius: 25px; /* This sets the rounded corners */
+    cursor: pointer;
+    font-size: 18px;
+}
+/* Hover effect */
+.rounded-button:hover {
+    background-color: rgb(28, 27, 27);
+}
