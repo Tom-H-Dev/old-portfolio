@@ -2184,7 +2184,7 @@ video {
 /* Scroll Down Arrow */
 .scroll-down-arrow {
   position: fixed;
-  bottom: 80px; /* Adjust the distance from the bottom as needed */
+  bottom: 50px; /* Adjust the distance from the bottom as needed */
   left: 50%;
   transform: translateX(-50%);
   font-size: 46px; /* Adjust the font size as needed */
@@ -2192,4 +2192,14 @@ video {
   /*opacity: 0; /* Initially hide the arrow */
   z-index: 9999; /* Ensure it's above other content */
   cursor: default; /* Show a pointer cursor */
+}
+
+.rounded-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 25px; /* This sets the rounded corners */
+  cursor: pointer;
+  font-size: 18px;
 }
