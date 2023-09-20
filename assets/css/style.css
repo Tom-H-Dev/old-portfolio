@@ -279,7 +279,7 @@ article.active {
   padding-top: 45px;
   border-radius: 14px;
   box-shadow: var(--shadow-2);
-  cursor: pointer;
+  cursor: default;
   z-index: 1;
 }
 
@@ -2196,7 +2196,7 @@ video {
 
 .rounded-button {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: rgb(41, 41, 41);
   color: #fff;
   border: none;
   border-radius: 25px; /* This sets the rounded corners */
