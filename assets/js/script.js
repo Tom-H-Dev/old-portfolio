@@ -166,6 +166,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 
+
+
 const projModalTriggers = document.querySelectorAll('.proj-modal-trigger');
 const projModalOverlays = document.querySelectorAll('.proj-modal-overlay');
 const projModalCloseButtons = document.querySelectorAll('.proj-modal-close');
@@ -226,3 +228,26 @@ window.addEventListener('scroll', toggleScrollArrow);
 // Initial call to set the arrow's visibility when the page loads
 toggleScrollArrow();
 
+// JavaScript to toggle the information boxes
+const toggleButtons = document.querySelectorAll(".toggle-button");
+toggleButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const infoBox = button.nextElementSibling;
+    if (infoBox.style.display === "none" || infoBox.style.display === "") {
+      infoBox.style.display = "block";
+    } else {
+      infoBox.style.display = "none";
+    }
+  });
+});
+
+function toggleInfo(arrow) {
+    const infoBox = arrow.parentElement.querySelector(".info-box");
+    if (infoBox.style.display === "none" || infoBox.style.display === "") {
+      infoBox.style.display = "block";
+      arrow.textContent = "▲"; // Change arrow to up when expanded
+    } else {
+      infoBox.style.display = "none";
+      arrow.textContent = "▼"; // Change arrow to down when collapsed
+    }
+  }

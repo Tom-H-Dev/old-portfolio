@@ -197,17 +197,10 @@
         </header>
 
         <section class="about-text">
-          <!-- <p>
-            I'm Game Developer student from Utrecht, Netherlands, currently studying at Grafisch Lyceum Utrecht.
-            I enjoy making things where I out my creative thoughts, and make it so others can enjoy my work.
-          </p> -->
-
           <p>
             Hey, I'm Tom, a dedicated game development student with a love for crafting captivating digital experiences. 
-            From indie projects to studio ventures, I specialize in systems/player programming and constantly seek new challenges.
-          </p>
-          <p>
-            I bring together Unity and C# proficiency and a deep grasp of game mechanics, keen intrest is learning, optimization, and cutting-edge tech.
+            From indie projects to studio ventures, I specialize in systems/gameplay programming and constantly seek new challenges.
+            I bring together Unity and C# proficiency.
           </p>
           <p>
             What drives me? 
@@ -545,6 +538,10 @@
             <li class="skills-item">
               <div class="title-wrapper">
                 <h5 class="h5">Unity C#</h5>
+                <div class="info-box">
+                  <p style="color: white;"><br><br>Additional information about Unity C# goes here.</p>
+                </div>
+                <div class="arrow" onclick="toggleInfo(this)">▼</div>
               </div>
             </li>
 
@@ -751,19 +748,16 @@
                 <h2>Snowie Snow</h2>
                 <!--The image of the project displayed on the front-->
                 <figure class="project-img">
-                  <img src="./assets/images/SnowieSnowProfile.png" alt="orizon" loading="lazy">
+                  <video muted loop autoplay>
+                    <source src="./assets/videos/SnowieSnow/snowie-snow.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                  </video>
                 </figure>
                 <!--The first text colom-->
                 <p><br>
                   Snowie Snow is a game where you and a friend race on sleds against eachother until the timer is up or when one of you crash against an obstacle on the slope.
                   The game is a splitscreen local 1v1 game that only supports game controllers. 
                 </p><br>
-                <div class="video-container">
-                  <video muted loop autoplay>
-                    <source src="./assets/videos/SnowieSnow/snowie-snow.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                  </video>
-                </div>
 
                 <!--The second text colom-->
                 <p><br>
@@ -1218,14 +1212,14 @@
                 <!--The Close button on the top right-->
                 <button class="proj-modal-close"data-proj-modal-id="project-7-modal"><ion-icon name="close-outline"></ion-icon></button>
                 <!--The title of the project-->
-                <h2>Conway's Game of Life</h2>
+                <h2>Conway's Game of Life</h2><br><br><br><br>
                 <!--The image of the project displayed on the front-->
                 <div class="video-container">
                   <video muted loop autoplay>
                     <source src="./assets/videos/GameOfLife/Game Of Life Video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                </div>
+                </div><br><br><br>
                 <!--The first text colom-->
                 <p><br>
 
@@ -1234,10 +1228,28 @@
                 </p>
                 <!--The second text colom-->
                 <p><br>
-                  The task was that we needed to make the simulation made by Dr. John H Conway in a weeks time.
+                  The idea was to remake the simulation made by Dr. John H Conway in a weeks time.
                   With that we got a explanation on how to simulation works and some mathematics aroudn it.
                   I made an efficcient version that runs smoothly via unity and works exactly as the original.
                 </p>
+
+                <div class="image-container">
+                  <img src="./assets/images/GameOfLife/gol_snippet_01.PNG" alt="Image 1">
+                </div>
+                <p><br>
+                  This piece of code check the amout of neighbors the specific cell has and how many of those are alive.
+                  First it checks all the possible positions with the 2 arrays called "_optionArrayX" and "_optionArrayY".
+                  For al lthe possible combinations the cell will check if the neighboring cells are alive or dead and execute the corresponding actions.
+                </p>
+                <div class="image-container">
+                  <img src="./assets/images/GameOfLife/gol_snippet_02.PNG" alt="Image 1">
+                </div>
+                <p><br>
+                  This function will set for the total width and height of the gid where you are simulating all the cells on or off.
+                  This will edit the sprite editor to change the visual of the cells to show what cells are alive or dead.
+                  If the cells are alive or not is remembered by the "_activeCells" array and set into the "_cellGrid" array to show which cells visuals are being changed.
+                </p>
+
                 <!--The referance to the github repo-->
                 <p>
                   <br>If you want to read some code I have writen click the icon below.

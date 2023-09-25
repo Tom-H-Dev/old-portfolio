@@ -2041,17 +2041,17 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .proj-modal-content {
   position: absolute;
-  max-height: 70vh;
+  max-height: 80vh;
   overflow-y: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  left: 35%;
+  transform: translate(-25%, -25%);
   background-color: rgba(30, 30, 31, 1);
   border-radius: 15px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: white;
-  max-width: 60%;
+  max-width: 75%;
 }
 
 /*#region Scrollbar Modal */
@@ -2202,4 +2202,5 @@ video {
   border-radius: 25px; /* This sets the rounded corners */
   cursor: pointer;
   font-size: 18px;
+  display: flex;
 }
