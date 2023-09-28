@@ -926,9 +926,9 @@ main {
  * skills 
  */
 
-.skills-title { margin-bottom: 20px; }
+/*.skills-title { margin-bottom: 20px; }
 
-.skills-list { padding: 20px; }
+.skills-list { padding: 20px; }*/
 
 
 .skills-item:not(:last-child) { margin-bottom: 15px; }
@@ -958,6 +958,68 @@ main {
   height: 100%;
   border-radius: inherit;
 }
+
+
+
+
+
+
+
+.skills-title {
+  margin-bottom: 20px;
+}
+
+.skills-list {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-item {
+  flex: 1;
+  min-width: calc(50% - 10px); /* Adjust the width as needed */
+  background-color: #f0f0f000; /* Background color for skill boxes */
+  margin-right: 20px; /* Adjust spacing between skill boxes */
+  margin-bottom: 20px; /* Adjust spacing between rows */
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.h5 {
+  margin: 0;
+}
+
+.title-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.additional-info {
+  color: white;
+  /* You can add styles for the right-side text box here */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
