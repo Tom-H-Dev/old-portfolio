@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Tom Holewijn" width="80">
+          <img src="./assets/images/me.jpeg" alt="Tom Holewijn" width="80">
         </figure>
 
         <div class="info-content">
@@ -225,6 +225,22 @@
             <li class="service-item">
 
               <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Game Development</h4>
+
+                <p class="service-item-text">
+                  I make video games in Unity C#.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
                 <img src="./assets/images/icon-design.svg
                 " alt="design icon" width="40">
               </div>
@@ -234,22 +250,6 @@
 
                 <p class="service-item-text">
                   Simple Game design for video games.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Game Development</h4>
-
-                <p class="service-item-text">
-                  I make video games in Unity C#.
                 </p>
               </div>
 
@@ -542,6 +542,15 @@
                   <p style="color: white;"><br><br>Additional information about Unity C# goes here.</p>
                 </div>
                 <div class="arrow" onclick="toggleInfo(this)">▼</div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <button type="button" class="collapsible">Open Collapsible</button>
+              <div class="content">
+                <p>Lorem ipsum...</p>
+              </div>
               </div>
             </li>
 
@@ -980,14 +989,14 @@
                 <!--The Close button on the top right-->
                 <button class="proj-modal-close"data-proj-modal-id="project-4-modal"><ion-icon name="close-outline"></ion-icon></button>
                 <!--The title of the project-->
-                <h2>Hot Lead</h2>
+                <h2>Hot Lead</h2><br><br><br>
                 <!--The image of the project displayed on the front-->
                 <div class="video-container">
                   <video muted loop autoplay>
                     <source src="./assets/videos/HotLead/Trailer(1).mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                </div>
+                </div><br><br><br>
                 <!--The first text colom-->
                 <p><br>
 
@@ -1024,7 +1033,7 @@
                 </div>
                 <p><br>
                   This is a part of the cycle for the enemies to see if they are are following the waytpoints they got assigned or if they are attacking the player. 
-                  When the player is set as the target the enemy will follow the player for a set distance from the player when the player is outside this area the enemy will walk back to tthe path.
+                  When the player is set as the target the enemy will follow the player for a set distance from the player when the player is outside this area the enemy will walk back to the path.
                 </p>
 
                 <!--The referance to the github repo-->
@@ -1080,10 +1089,10 @@
                 <!-- Two Images Side by Side -->
                 <div class="image-container">
                   <div class="image">
-                    <img src="./assets/images/SnowieSnow/image (11).png" alt="Image 1">
+                    <img src="./assets/images/shots fired/sf01.PNG" alt="Image 1">
                   </div>
                   <div class="image">
-                    <img src="./assets/images/SnowieSnow/image (11).png" alt="Image 2" >
+                    <img src="./assets/images/shots fired/sf02.PNG" alt="Image 2" >
                   </div>
                 </div>
 
@@ -1094,6 +1103,22 @@
                   Next to that we had to make a core mechanic that was used through all 3 levels.
                   We had to make a simple verion of this core mechanic in a tech demo to show the teachers we were able to make this mechanic.
                   With this tech demo we had to present our game and get green lit for our project to start with making the game.
+                </p><br>
+
+                <div class="image-container">
+                  <img src="./assets/images/shots fired/snippet01.PNG" alt="Image 1">
+                </div>
+                <p><br>
+                  This is my code made for rotating the items you can pickup and use to solve puzzles.
+                  I first had problems with gimbal lock when rotating items, I fixed that with resetting the rotation angle every time and now you can freely rotate the object using the arrow keys.
+                </p>
+                <div class="image-container">
+                  <img src="./assets/images/shots fired/snippet02.PNG" alt="Image 1">
+                </div>
+                <p><br>
+                  This function is part of the "IHittable" interface to make sure that everything that you can pick up does so.
+                  The object that you picked up is parented to the player so the object is always with the player.
+                  Everything that is picked up is also set to another layer to let the camera stacking work so the objects that you have picked up are always on screen.
                 </p><br>
 
                 <p>
@@ -1149,7 +1174,7 @@
                     <source src="./assets/videos/DndRandomGen/dndradomgenvid.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                   </video>
-                </div>
+                </div><br><br><br>
                 <!--The first text colom-->
                 <p><br>
                   This small and simple generator is a stat and feat generator for a system in a friends d&d campaign.
@@ -1166,6 +1191,23 @@
                   In this project I learnd some basics such as variables, lists, random generation and OS system functions.
                   Next to that I have used the MbConstants pop-up for a simple pop-up and how to implement this with what I wanted to make.
                 </p>
+
+                <div class="image-container">
+                  <img src="./assets/images/dndgen/python001.PNG" alt="Image 1">
+                </div>
+                <p><br>
+                  First the for loop will generate a random amount of special features.
+                  When the forloop is completed you will enter the area where the MbConstants will take over and make a pop up menu.
+                  In this menu you will see some information of the different stats like  health, armor, strenght, etc.
+                </p>
+                <div class="image-container">
+                  <img src="./assets/images/dndgen/python002.PNG" alt="Image 1">
+                </div>
+                <p><br>
+                  The def "restart()" is basically a small function that restarts the entire code script to restart the generator when you want to generate a new outcome.
+                  then you have a class where the different states of the MbConstants library are stored so the code knows what states I have and add those with the buttons on the pop up.
+                </p>
+
                 <!--The referance to the github repo-->
                 <p><br>
                   <br>If you want to read some code I have writen click the icon below.
@@ -1207,7 +1249,7 @@
                 <!--The Close button on the top right-->
                 <button class="proj-modal-close"data-proj-modal-id="project-7-modal"><ion-icon name="close-outline"></ion-icon></button>
                 <!--The title of the project-->
-                <h2>Conway's Game of Life</h2><br><br><br><br>
+                <h2>Conway's Game of Life</h2><br><br><br>
                 <!--The image of the project displayed on the front-->
                 <div class="video-container">
                   <video muted loop autoplay>
