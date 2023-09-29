@@ -1414,6 +1414,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 /**
  * responsive larger than 580px screen
  */
+@media (max-width: 580px) {
+  .proj-modal-overlay {
+    display: none;
+  }
+}
 
 @media (min-width: 580px) {
 
@@ -1683,8 +1688,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
   }
-  
-
 
 
 
@@ -2257,7 +2260,10 @@ video {
 }
 
 .rounded-button {
-  padding: 10px 385px;
+  
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
   background-color: rgb(41, 41, 41);
   color: #fff;
   border: none;
@@ -2267,6 +2273,10 @@ video {
   display: flex;
 }
 
+.button-center {
+  width: 100%;
+  text-align: center;
+}
 
 /* Style the button that is used to open and close the collapsible content */
 .collapsible {
