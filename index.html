@@ -241,6 +241,22 @@
             <li class="service-item">
 
               <div class="service-icon-box">
+                <img src="./assets/images/icons8-database-24.png" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Network programming</h4>
+
+                <p class="service-item-text">
+                  I build databases and multiplayer projects.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
                 <img src="./assets/images/icon-design.svg
                 " alt="design icon" width="40">
               </div>
@@ -1094,22 +1110,21 @@
                 </p>
 
                 <div class="image-container">
-                  <img src="./assets/images/HavocZone/snippet01.PNG" alt="Image 1">
+                  <img src="./assets/images/Async/snipet 1 check token.PNG" alt="Image 1">
                 </div>
                 <p><br>
-                  This is a simple shooting system where the player's ammo will be set once at the start of the match and checks if the player has the right gun and not somebody else's gun.
-                  Then it will also check if the player has ammo in thier gun and if the firing type is not set to safe so the player can shoot.
-                  I still need to add some sound effects and animations to the gun so it feels more realistic, because right now I only have a sound effect for the shooting.
+                  Every function gets started with this functionality that will check if the token is correct that the player has.
+                  The player has made a token the moment that you log in and when you log out the token gets deleted.
+                  Without the token you cannot do anything and it works against hacker that try and hack the game. 
                 </p>
                 
                 <div class="image-container">
-                  <img src="./assets/images/HavocZone/snippet02.PNG" alt="Image 1">
+                  <img src="./assets/images/Async/snippet2 api call.PNG" alt="Image 1">
                 </div>
                 <p><br>
-                  This is a part of a larger script to add and update all the information of the players in the lobby.
-                  All the correct data gets set to the players own information like the playername, playerid, steamid, profile picture and if the player is ready to play.
-                  This information is required to see if the player has indeed installed the game and so you can display specific stats at the end or during a game.
-                  All this information gets saved in the player until this player has left the game.
+                  This is the api call that alls the server and gives some data and retrieve some data from the server.
+                  In this case you gain resources every couple of seconds so at the top you pass some data like the token and last tick.
+                  At the bottom you recieve some data like the gold, lumber and mana.
                 </p>
 
                 <!--The referance to the github repo-->
